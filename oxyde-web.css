@@ -1,0 +1,10 @@
+@media screen and (min-width: 500px) {
+    nav.navbar {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+#logo {
+    max-height: 50px;
+}
