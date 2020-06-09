@@ -1,10 +1,18 @@
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 750px) {
     nav.navbar {
-        padding-left: 75px;
-        padding-right: 75px;
+        padding-left: 125px;
+        padding-right: 125px;
     }
 }
 
 #logo {
     max-height: 50px;
+}
+
+.contentContainer {
+    margin-top: 72px;
+}
+
+#privacyPolicy {
+    padding-top: 20px;
 }
