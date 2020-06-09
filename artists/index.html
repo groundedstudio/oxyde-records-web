@@ -11,9 +11,11 @@
     <title>Oxyde Records | Artists</title>
 
     <link href="/oxyde-web.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 </head>
     <script src="/pixi/pixi.min.js"></script>
 <body>
+    <noscript>You need to enable JavaScript to run this page.</noscript>
     <div class="container">
         <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
             <a href="/">
@@ -38,6 +40,27 @@
         </nav>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+    <script>
+        window.cookieconsent.initialise({
+            "palette": {
+                "popup": {
+                    "background": "#ffffff",
+                    "text": "#D0021B"
+                },
+                "button": {
+                    "background": "#D0021B",
+                    "text": "#ffffff"
+                }
+            },
+            "theme": "edgeless",
+            "position": "bottom-right",
+            "content": {
+                "message": "We (and our partners) use cookies!",
+                "href": "/cookies"
+            }
+        });
+    </script>
     <script type="text/javascript">
         let type = "WebGL"
         if(!PIXI.utils.isWebGLSupported()){
