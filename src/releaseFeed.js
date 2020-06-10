@@ -21,7 +21,7 @@ class ReleaseFeed extends React.Component {
     }
 
     componentDidMount() {
-        fetch('../static/releases.json', {method: 'GET'}).then(res => {
+        fetch('/oxyde-records-web/static/releases.json', {method: 'GET'}).then(res => {
             return res.json();
         }).then(resJson => {
             this.setState({retreivedItems: true, releases: resJson});
