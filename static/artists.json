@@ -1,7 +1,10 @@
 {
     "housty": {
-        "Name": "Housty",
-        "desc": "Insert artist description here",
-        "soundcloud": "houstydnb"
+        "name": "Housty",
+        "shortDesc": "Insert description here",
+        "desc": "Insert artist profile here, maybe some pics and stuff?",
+        "soundcloud": "houstydnb",
+        "instagram": "houstydnb",
+        "coverImgUrl": "https://i1.sndcdn.com/visuals-000780645313-T360qX-t2480x520.jpg"
     }
 }
