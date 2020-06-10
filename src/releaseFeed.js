@@ -7,9 +7,9 @@ const e = React.createElement;
 function TrackElement (props) {
     return(
         <div className="trackElement">
-            <h3 className="trackHeadline">{props.title} - <a href={"/artists?id=" + props.artistId}>{props.artistName}</a></h3>
+            <h3 className="trackHeadline">{props.title} - <a href={"/artists/?id=" + props.artistId}>{props.artistName}</a></h3>
             <p className="trackElementDesc">{props.desc}</p>
-            <iframe width="100%" height="100" scrolling="no" frameBorder="no" allow="autoplay" src={props.ifsrc}></iframe>
+            <iframe width="100%" height="100" scrolling="no" frameBorder="no" allow="autoplay" src={`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${props.sctrackid}&color=%23d0021b&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true`}></iframe>
         </div>
     )
 }
@@ -44,7 +44,8 @@ class ReleaseFeed extends React.Component {
                         artistId={track.artistId}
                         releaseDate={track.releaseDate}
                         desc={track.desc}
-                        ifsrc={track.ifsrc}
+                        sctrackid={track.sctrackid}
+                        key={track.title}
                     />
                 )
             })

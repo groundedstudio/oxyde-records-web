@@ -23,7 +23,7 @@ function TrackElement(props) {
             " - ",
             React.createElement(
                 "a",
-                { href: "/artists?id=" + props.artistId },
+                { href: "/artists/?id=" + props.artistId },
                 props.artistName
             )
         ),
@@ -32,7 +32,7 @@ function TrackElement(props) {
             { className: "trackElementDesc" },
             props.desc
         ),
-        React.createElement("iframe", { width: "100%", height: "100", scrolling: "no", frameBorder: "no", allow: "autoplay", src: props.ifsrc })
+        React.createElement("iframe", { width: "100%", height: "100", scrolling: "no", frameBorder: "no", allow: "autoplay", src: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/" + props.sctrackid + "&color=%23d0021b&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true" })
     );
 }
 
@@ -74,7 +74,8 @@ var ReleaseFeed = function (_React$Component) {
                         artistId: track.artistId,
                         releaseDate: track.releaseDate,
                         desc: track.desc,
-                        ifsrc: track.ifsrc
+                        sctrackid: track.sctrackid,
+                        key: track.title
                     });
                 });
                 return React.createElement(
