@@ -6,6 +6,17 @@
     .trackElement {
         width: 85%;
     }
+    .artistElement {
+        width: 85%;
+        margin: 0 auto;
+    }
+    .artistProfile {
+        width: 85%;
+    }
+}
+
+body {
+    margin: 0;
 }
 
 #logo {
@@ -14,6 +25,7 @@
 
 .contentContainer {
     margin-top: 72px;
+    height: 100%;
 }
 
 #privacyPolicy {
@@ -22,6 +34,9 @@
 
 #releaseFeed {
     padding-top: 20px;
+}
+
+#artistFeed {
 }
 
 .loader {
@@ -33,6 +48,10 @@
     -webkit-animation: spin 2s linear infinite; /* Safari */
     animation: spin 2s linear infinite;
     margin: 0 auto;
+}
+
+.loaderWrapper {
+    padding-top: 50px;
 }
 
 /* Safari */
@@ -49,4 +68,51 @@
 .trackElement {
     margin: 0 auto;
     margin-bottom: 50px;
+}
+
+.artistCardsWrapper {
+    padding-top: 20px;
+}
+
+.artistProfile {
+    margin: 0 auto;
+}
+
+.artistSocials {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.artistSocialLink {
+    border: 2px solid #D0021B;
+    padding: 3px;
+    height: 34px;
+    width: 34px;
+    border-radius: 17px;
+    margin: 0 5px;
+}
+
+.fa-soundcloud.artistSocialIcon {
+    text-decoration: none;
+    color: black;
+    margin: 0 2px;
+}
+
+.fa-instagram.artistSocialIcon {
+    text-decoration: none;
+    color: black;
+    margin: 0 5px;
+}
+
+.artistProfileHeadline {
+    padding: 0 15px;
+}
+
+.card-title {
+    padding-left: 0;
+}
+
+.trackCarousel {
+    margin-top: auto;
 }
