@@ -23,7 +23,7 @@ function TrackElement(props) {
             " - ",
             React.createElement(
                 "a",
-                { href: "/artists/?id=" + props.artistId },
+                { href: "/oxyde-records-web/artists/?id=" + props.artistId },
                 props.artistName
             )
         ),
