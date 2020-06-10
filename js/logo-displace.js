@@ -7,7 +7,7 @@ app.stage.interactive = true;
 const container = new PIXI.Container();
 app.stage.addChild(container);
 
-const logo = PIXI.Sprite.from('../static/logo.png');
+const logo = PIXI.Sprite.from('/oxyde-records-web/static/logo.png');
 container.addChild(logo);
 logo.x = 0;
 logo.y = 0;
@@ -15,7 +15,7 @@ logo.height = 427;
 logo.width = 2000;
 
 
-const displacementSprite = PIXI.Sprite.from('../static/clouds.jpg');
+const displacementSprite = PIXI.Sprite.from('/oxyde-records-web/static/clouds.jpg');
 // Make sure the sprite is wrapping.
 displacementSprite.texture.baseTexture.wrapMode = PIXI.WRAP_MODES.REPEAT;
 const displacementFilter = new PIXI.filters.DisplacementFilter(displacementSprite);
