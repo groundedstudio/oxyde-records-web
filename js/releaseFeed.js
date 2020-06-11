@@ -13,6 +13,29 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var e = React.createElement;
 
 function TrackElement(props) {
+    console.log(props);
+    // Iterate over artists on track and add each one.
+    var artists = [];
+    for (var i = 0; i < props.artistIds.length; i++) {
+        if (i === props.artistIds.length - 1) {
+            artists.push(React.createElement(
+                "a",
+                { href: "/artists/?id=" + props.artistIds[i] },
+                props.artistNames[i]
+            ));
+        } else {
+            artists.push(React.createElement(
+                "span",
+                null,
+                React.createElement(
+                    "a",
+                    { href: "/artists/?id=" + props.artistIds[i] },
+                    props.artistNames[i]
+                ),
+                ", "
+            ));
+        }
+    }
     return React.createElement(
         "div",
         { className: "trackElement" },
@@ -21,11 +44,7 @@ function TrackElement(props) {
             { className: "trackHeadline" },
             props.title,
             " - ",
-            React.createElement(
-                "a",
-                { href: "/artists/?id=" + props.artistId },
-                props.artistName
-            )
+            artists
         ),
         React.createElement(
             "p",
@@ -70,8 +89,8 @@ var ReleaseFeed = function (_React$Component) {
                 var tracks = this.state.releases.map(function (track) {
                     return React.createElement(TrackElement, {
                         title: track.title,
-                        artistName: track.artistName,
-                        artistId: track.artistId,
+                        artistNames: track.artistNames,
+                        artistIds: track.artistIds,
                         releaseDate: track.releaseDate,
                         desc: track.desc,
                         sctrackid: track.sctrackid,

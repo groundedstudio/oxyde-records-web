@@ -1,10 +1,18 @@
 {
     "housty": {
         "name": "Housty",
-        "shortDesc": "Insert description here",
-        "desc": "Insert artist profile here, maybe some pics and stuff?",
+        "shortDesc": "A Drum and Bass producer inspired by the likes of Halogenix and QZB, honing into the deeper side of the genre. Previous releases on Fearless Audio, Maneki UK and Pulse Rate Audio see this producer at the start of his journey.",
+        "desc": "A Drum and Bass producer inspired by the likes of Halogenix and QZB, honing into the deeper side of the genre. Previous releases on Fearless Audio, Maneki UK and Pulse Rate Audio see this producer at the start of his journey.",
         "soundcloud": "houstydnb",
         "instagram": "houstydnb",
         "coverImgUrl": "https://i1.sndcdn.com/visuals-000780645313-T360qX-t2480x520.jpg"
+    },
+    "cj": {
+        "name": "CJ",
+        "shortDesc": "Inspired by the modern dancefloor sounds of Drum and Bass, CJ follows in the same resonance as the likes of Dimension, Metrik, Culture Shock. His sounds will bring you the best in Liquid Dancefloor.",
+        "desc": "Inspired by the modern dancefloor sounds of Drum and Bass, CJ follows in the same resonance as the likes of Dimension, Metrik, Culture Shock. His sounds will bring you the best in Liquid Dancefloor.",
+        "soundcloud": "cjmusicuk",
+        "instagram": "cj_musicuk",
+        "coverImgUrl": "https://i1.sndcdn.com/visuals-000260920153-AASiba-t2480x520.jpg"
     }
 }
