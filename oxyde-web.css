@@ -13,6 +13,13 @@
     .artistProfile {
         width: 85%;
     }
+    .forthcomingElement {
+        max-width: 20rem;
+    }
+    #forthcomingFeed {
+        width: 85%;
+        margin: 0 auto;
+    }
 }
 
 body {
@@ -41,6 +48,10 @@ body {
 }
 
 #artistFeed {
+}
+
+#forthcomingFeed {
+    padding-top: 20px;
 }
 
 .loader {
