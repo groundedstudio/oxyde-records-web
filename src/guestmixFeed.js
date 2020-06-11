@@ -1,5 +1,5 @@
-// releaseFeed.js
-// The react component which renders the feed of releases.
+// guestmixFeed.js
+// The react component which renders the feed of guestmixes.
 'use strict';
 
 const e = React.createElement;
@@ -7,11 +7,11 @@ const e = React.createElement;
 function TrackElement (props) {
     // Iterate over artists on track and add each one.
     var artists = []
-    for (var i = 0; i < props.artistIds.length; i++) {
-        if (i === (props.artistIds.length - 1)) {
-            artists.push(<a href={"/artists/?id=" + props.artistIds[i]}>{props.artistNames[i]}</a>)
+    for (var i = 0; i < props.artistUrls.length; i++) {
+        if (i === (props.artistUrls.length - 1)) {
+            artists.push(<a href={props.artistUrls[i]} key={props.artistNames[i]}>{props.artistNames[i]}</a>)
         } else {
-            artists.push(<span><a href={"/artists/?id=" + props.artistIds[i]}>{props.artistNames[i]}</a>, </span>)
+            artists.push(<span key={props.artistNames[i]}><a href={props.artistUrls[i]}>{props.artistNames[i]}</a>, </span>)
         }
     }
     return(
@@ -23,14 +23,14 @@ function TrackElement (props) {
     )
 }
 
-class ReleaseFeed extends React.Component {
+class GuestmixFeed extends React.Component {
     constructor(props) {
         super(props);
         this.state = { retreivedItems: false };
     }
 
     componentDidMount() {
-        fetch('/static/releases.json', {method: 'GET'}).then(res => {
+        fetch('/static/guest_mixes.json', {method: 'GET'}).then(res => {
             return res.json();
         }).then(resJson => {
             this.setState({retreivedItems: true, releases: resJson});
@@ -50,7 +50,7 @@ class ReleaseFeed extends React.Component {
                     <TrackElement
                         title={track.title}
                         artistNames={track.artistNames}
-                        artistIds={track.artistIds}
+                        artistUrls={track.artistUrls}
                         releaseDate={track.releaseDate}
                         desc={track.desc}
                         sctrackid={track.sctrackid}
@@ -67,5 +67,5 @@ class ReleaseFeed extends React.Component {
     }
 }
 
-const domContainer = document.querySelector('#releaseFeed');
-ReactDOM.render(e(ReleaseFeed), domContainer);
+const domContainer = document.querySelector('#guestmixFeed');
+ReactDOM.render(e(GuestmixFeed), domContainer);

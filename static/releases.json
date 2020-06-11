@@ -1,16 +1,16 @@
 [
     {
         "title": "Memories",
-        "artistName": "Housty",
-        "artistId": "housty",
+        "artistNames": ["Housty"],
+        "artistIds": ["housty"],
         "releaseDate": "09 May 2020 00:00:00 UTC",
         "desc": "Insert brief description here",
         "sctrackid": "812199241"
     },
     {
         "title": "Flatline",
-        "artistName": "Housty",
-        "artistId": "housty",
+        "artistNames": ["Housty", "CJ"],
+        "artistIds": ["housty", "cj"],
         "releaseDate": "09 May 2020 00:00:00 UTC",
         "desc": "Insert brief description here",
         "sctrackid": "802688827"

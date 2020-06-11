@@ -1,5 +1,5 @@
-// releaseFeed.js
-// The react component which renders the feed of releases.
+// guestmixFeed.js
+// The react component which renders the feed of guestmixes.
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -15,20 +15,20 @@ var e = React.createElement;
 function TrackElement(props) {
     // Iterate over artists on track and add each one.
     var artists = [];
-    for (var i = 0; i < props.artistIds.length; i++) {
-        if (i === props.artistIds.length - 1) {
+    for (var i = 0; i < props.artistUrls.length; i++) {
+        if (i === props.artistUrls.length - 1) {
             artists.push(React.createElement(
                 "a",
-                { href: "/artists/?id=" + props.artistIds[i] },
+                { href: props.artistUrls[i], key: props.artistNames[i] },
                 props.artistNames[i]
             ));
         } else {
             artists.push(React.createElement(
                 "span",
-                null,
+                { key: props.artistNames[i] },
                 React.createElement(
                     "a",
-                    { href: "/artists/?id=" + props.artistIds[i] },
+                    { href: props.artistUrls[i] },
                     props.artistNames[i]
                 ),
                 ", "
@@ -54,24 +54,24 @@ function TrackElement(props) {
     );
 }
 
-var ReleaseFeed = function (_React$Component) {
-    _inherits(ReleaseFeed, _React$Component);
+var GuestmixFeed = function (_React$Component) {
+    _inherits(GuestmixFeed, _React$Component);
 
-    function ReleaseFeed(props) {
-        _classCallCheck(this, ReleaseFeed);
+    function GuestmixFeed(props) {
+        _classCallCheck(this, GuestmixFeed);
 
-        var _this = _possibleConstructorReturn(this, (ReleaseFeed.__proto__ || Object.getPrototypeOf(ReleaseFeed)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (GuestmixFeed.__proto__ || Object.getPrototypeOf(GuestmixFeed)).call(this, props));
 
         _this.state = { retreivedItems: false };
         return _this;
     }
 
-    _createClass(ReleaseFeed, [{
+    _createClass(GuestmixFeed, [{
         key: "componentDidMount",
         value: function componentDidMount() {
             var _this2 = this;
 
-            fetch('/static/releases.json', { method: 'GET' }).then(function (res) {
+            fetch('/static/guest_mixes.json', { method: 'GET' }).then(function (res) {
                 return res.json();
             }).then(function (resJson) {
                 _this2.setState({ retreivedItems: true, releases: resJson });
@@ -89,7 +89,7 @@ var ReleaseFeed = function (_React$Component) {
                     return React.createElement(TrackElement, {
                         title: track.title,
                         artistNames: track.artistNames,
-                        artistIds: track.artistIds,
+                        artistUrls: track.artistUrls,
                         releaseDate: track.releaseDate,
                         desc: track.desc,
                         sctrackid: track.sctrackid,
@@ -105,8 +105,8 @@ var ReleaseFeed = function (_React$Component) {
         }
     }]);
 
-    return ReleaseFeed;
+    return GuestmixFeed;
 }(React.Component);
 
-var domContainer = document.querySelector('#releaseFeed');
-ReactDOM.render(e(ReleaseFeed), domContainer);
+var domContainer = document.querySelector('#guestmixFeed');
+ReactDOM.render(e(GuestmixFeed), domContainer);

@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Oxyde Guestmix #3",
+        "artistNames": ["CJ"],
+        "artistUrls": ["/artists/?id=cj"],
+        "releaseDate": "11 Jun 2020 00:00:00 UTC",
+        "desc": "Week 3's 'Guestmix' see's CJ take over to bring you his sounds.",
+        "sctrackid": "835896304"
+    },
+    {
+        "title": "Oxyde Guestmix #2",
+        "artistNames": ["Patchy"],
+        "artistUrls": ["https://soundcloud.com/patchydnb"],
+        "releaseDate": "04 Jun 2020 00:00:00 UTC",
+        "desc": "Week 2 sees Patchy take over the reigns for his take on the darker sounds of Drum & Bass.",
+        "sctrackid": "833862295"
+    },
+    {
+        "title": "Oxyde Guestmix #1",
+        "artistNames": ["Ivor Emanuel"],
+        "artistUrls": ["https://soundcloud.com/louis-burgess-2"],
+        "releaseDate": "28 May 2020 00:00:00 UTC",
+        "desc": "Ivor Emanuel takes over the reigns for the first in a series of mixes coming to Oxyde over the coming months.",
+        "sctrackid": "829686829"
+    }
+]
