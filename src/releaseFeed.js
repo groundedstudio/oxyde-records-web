@@ -9,9 +9,9 @@ function TrackElement (props) {
     var artists = []
     for (var i = 0; i < props.artistIds.length; i++) {
         if (i === (props.artistIds.length - 1)) {
-            artists.push(<a href={"/artists/?id=" + props.artistIds[i]}>{props.artistNames[i]}</a>)
+            artists.push(<a key={props.artistIds} href={"/artists/?id=" + props.artistIds[i]}>{props.artistNames[i]}</a>)
         } else {
-            artists.push(<span><a href={"/artists/?id=" + props.artistIds[i]}>{props.artistNames[i]}</a>, </span>)
+            artists.push(<span key={props.artistIds[i]}><a href={"/artists/?id=" + props.artistIds[i]}>{props.artistNames[i]}</a>, </span>)
         }
     }
     return(

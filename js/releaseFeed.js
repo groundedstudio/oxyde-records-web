@@ -19,13 +19,13 @@ function TrackElement(props) {
         if (i === props.artistIds.length - 1) {
             artists.push(React.createElement(
                 "a",
-                { href: "/artists/?id=" + props.artistIds[i] },
+                { key: props.artistIds, href: "/artists/?id=" + props.artistIds[i] },
                 props.artistNames[i]
             ));
         } else {
             artists.push(React.createElement(
                 "span",
-                null,
+                { key: props.artistIds[i] },
                 React.createElement(
                     "a",
                     { href: "/artists/?id=" + props.artistIds[i] },
