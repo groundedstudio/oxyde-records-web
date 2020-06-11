@@ -16,7 +16,7 @@ function ArtistCardElement(props) {
     return React.createElement(
         "div",
         { className: "card artistElement" },
-        React.createElement("img", { src: props.coverImgUrl, className: "card-img-top", alt: "..." }),
+        React.createElement("img", { src: props.coverImgUrl, className: "card-img-top", alt: props.name }),
         React.createElement(
             "div",
             { className: "card-body" },
@@ -152,7 +152,7 @@ var ArtistFeed = function (_React$Component) {
             var _this2 = this;
 
             // Get artist info.
-            fetch('/oxyde-records-web/static/artists.json', { method: 'GET' }).then(function (res) {
+            fetch('/static/artists.json', { method: 'GET' }).then(function (res) {
                 return res.json();
             }).then(function (resJson) {
                 _this2.setState({ retrievedItems: true, artists: resJson });
@@ -165,7 +165,7 @@ var ArtistFeed = function (_React$Component) {
             });
 
             // Get releases
-            fetch('/oxyde-records-web/static/releases.json', { method: 'GET' }).then(function (res) {
+            fetch('/static/releases.json', { method: 'GET' }).then(function (res) {
                 return res.json();
             }).then(function (resJson) {
                 _this2.setState({ releases: resJson });

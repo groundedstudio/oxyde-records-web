@@ -10,16 +10,16 @@
 
     <title>Oxyde Records | Artists</title>
 
-    <link href="../oxyde-web.css" rel="stylesheet">
+    <link href="/oxyde-web.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
     <script src="https://kit.fontawesome.com/df340a3dd8.js" crossorigin="anonymous"></script>
 </head>
-    <script src="../pixi/pixi.min.js"></script>
+    <script src="/pixi/pixi.min.js"></script>
 <body>
     <noscript>You need to enable JavaScript to run this page.</noscript>
     <div class="container">
         <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
-            <a href="..">
+            <a href="/">
                 <canvas id="logo"></canvas>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,13 +28,13 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/oxyde-records-web">releases</a>
+                        <a class="nav-link" href="/">releases</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="/oxyde-records-web/artists">artists <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/artists">artists <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/oxyde-records-web/about">about</a>
+                        <a class="nav-link" href="/about">about</a>
                     </li>
                 </ul>
             </div>
@@ -60,7 +60,7 @@
             "position": "bottom-right",
             "content": {
                 "message": "We (and our partners) use cookies!",
-                "href": "/oxyde-records-web/privacy"
+                "href": "/privacy"
             }
         });
     </script>
@@ -72,7 +72,7 @@
 
         PIXI.utils.sayHello(type)
     </script>
-    <script src="../js/logo-displace.js"></script>
+    <script src="/js/logo-displace.js"></script>
     <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
     <script
@@ -84,6 +84,6 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <!-- Load our React component. -->
-    <script type="module" src="../js/artistFeed.js"></script>
+    <script type="module" src="/js/artistFeed.js"></script>
 </body>
 </html>

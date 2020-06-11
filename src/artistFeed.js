@@ -7,7 +7,7 @@ const e = React.createElement;
 function ArtistCardElement (props) {
     return (
         <div className="card artistElement">
-            <img src={props.coverImgUrl} className="card-img-top" alt="..."/>
+            <img src={props.coverImgUrl} className="card-img-top" alt={props.name}/>
             <div className="card-body">
                 <h5 className="card-title">{props.name}</h5>
                 <p className="card-text">{props.shortDesc}</p>
@@ -78,7 +78,7 @@ class ArtistFeed extends React.Component {
 
     componentDidMount() {
         // Get artist info.
-        fetch('/oxyde-records-web/static/artists.json', {method: 'GET'}).then(res => {
+        fetch('/static/artists.json', {method: 'GET'}).then(res => {
             return res.json();
         }).then(resJson => {
             this.setState({ retrievedItems: true, artists: resJson });
@@ -91,7 +91,7 @@ class ArtistFeed extends React.Component {
         });
 
         // Get releases
-        fetch('/oxyde-records-web/static/releases.json', {method: 'GET'}).then(res => {
+        fetch('/static/releases.json', {method: 'GET'}).then(res => {
             return res.json();
         }).then(resJson => {
             this.setState({releases: resJson});
