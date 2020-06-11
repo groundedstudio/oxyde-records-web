@@ -152,7 +152,7 @@ var ArtistFeed = function (_React$Component) {
             var _this2 = this;
 
             // Get artist info.
-            fetch('/static/artists.json', { method: 'GET' }).then(function (res) {
+            fetch('/static/data/artists.json', { method: 'GET' }).then(function (res) {
                 return res.json();
             }).then(function (resJson) {
                 _this2.setState({ retrievedItems: true, artists: resJson });
@@ -165,7 +165,7 @@ var ArtistFeed = function (_React$Component) {
             });
 
             // Get releases
-            fetch('/static/releases.json', { method: 'GET' }).then(function (res) {
+            fetch('/static/data/releases.json', { method: 'GET' }).then(function (res) {
                 return res.json();
             }).then(function (resJson) {
                 _this2.setState({ releases: resJson });

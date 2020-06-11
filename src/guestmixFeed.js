@@ -30,7 +30,7 @@ class GuestmixFeed extends React.Component {
     }
 
     componentDidMount() {
-        fetch('/static/guest_mixes.json', {method: 'GET'}).then(res => {
+        fetch('/static/data/guest_mixes.json', {method: 'GET'}).then(res => {
             return res.json();
         }).then(resJson => {
             this.setState({retreivedItems: true, releases: resJson});

@@ -71,7 +71,7 @@ var ReleaseFeed = function (_React$Component) {
         value: function componentDidMount() {
             var _this2 = this;
 
-            fetch('/static/releases.json', { method: 'GET' }).then(function (res) {
+            fetch('/static/data/releases.json', { method: 'GET' }).then(function (res) {
                 return res.json();
             }).then(function (resJson) {
                 _this2.setState({ retreivedItems: true, releases: resJson });

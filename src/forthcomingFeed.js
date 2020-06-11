@@ -33,7 +33,7 @@ class ForthcomingFeed extends React.Component {
     }
 
     componentDidMount() {
-        fetch('/static/forthcoming.json', {method: 'GET'}).then(res => {
+        fetch('/static/data/forthcoming.json', {method: 'GET'}).then(res => {
             return res.json();
         }).then(resJson => {
             this.setState({retreivedItems: true, releases: resJson});

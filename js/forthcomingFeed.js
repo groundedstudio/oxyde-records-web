@@ -78,7 +78,7 @@ var ForthcomingFeed = function (_React$Component) {
         value: function componentDidMount() {
             var _this2 = this;
 
-            fetch('/static/forthcoming.json', { method: 'GET' }).then(function (res) {
+            fetch('/static/data/forthcoming.json', { method: 'GET' }).then(function (res) {
                 return res.json();
             }).then(function (resJson) {
                 _this2.setState({ retreivedItems: true, releases: resJson });

@@ -71,7 +71,7 @@ var GuestmixFeed = function (_React$Component) {
         value: function componentDidMount() {
             var _this2 = this;
 
-            fetch('/static/guest_mixes.json', { method: 'GET' }).then(function (res) {
+            fetch('/static/data/guest_mixes.json', { method: 'GET' }).then(function (res) {
                 return res.json();
             }).then(function (resJson) {
                 _this2.setState({ retreivedItems: true, releases: resJson });

@@ -78,7 +78,7 @@ class ArtistFeed extends React.Component {
 
     componentDidMount() {
         // Get artist info.
-        fetch('/static/artists.json', {method: 'GET'}).then(res => {
+        fetch('/static/data/artists.json', {method: 'GET'}).then(res => {
             return res.json();
         }).then(resJson => {
             this.setState({ retrievedItems: true, artists: resJson });
@@ -91,7 +91,7 @@ class ArtistFeed extends React.Component {
         });
 
         // Get releases
-        fetch('/static/releases.json', {method: 'GET'}).then(res => {
+        fetch('/static/data/releases.json', {method: 'GET'}).then(res => {
             return res.json();
         }).then(resJson => {
             this.setState({releases: resJson});
