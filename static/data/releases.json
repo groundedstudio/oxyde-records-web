@@ -5,7 +5,8 @@
         "artistIds": ["housty"],
         "releaseDate": "09 May 2020 00:00:00 UTC",
         "desc": "Insert brief description here",
-        "sctrackid": "812199241"
+        "sctrackid": "812199241",
+        "isOxydeReleased": false
     },
     {
         "title": "Flatline",
@@ -13,6 +14,7 @@
         "artistIds": ["housty", "cj"],
         "releaseDate": "09 May 2020 00:00:00 UTC",
         "desc": "Insert brief description here",
-        "sctrackid": "802688827"
+        "sctrackid": "802688827",
+        "isOxydeReleased": false
     }
 ]

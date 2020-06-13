@@ -45,22 +45,32 @@ class ReleaseFeed extends React.Component {
                 <div className="loader"></div>
             );
         } else {
-            const tracks = this.state.releases.map((track) => {
-                return(
-                    <TrackElement
-                        title={track.title}
-                        artistNames={track.artistNames}
-                        artistIds={track.artistIds}
-                        releaseDate={track.releaseDate}
-                        desc={track.desc}
-                        sctrackid={track.sctrackid}
-                        key={track.title}
-                    />
-                )
-            })
+            var tracks = [];
+            this.state.releases.forEach((release, i) => {
+                if (release.isOxydeReleased) {
+                    tracks.push(
+                        <TrackElement
+                            title={release.title}
+                            artistNames={release.artistNames}
+                            artistIds={release.artistIds}
+                            releaseDate={release.releaseDate}
+                            desc={release.desc}
+                            sctrackid={release.sctrackid}
+                            key={release.title}
+                        />
+                    )
+                }
+            });
             return (
                 <div>
-                    {tracks}
+                    {tracks.length > 0
+                        ?
+                        tracks
+                        :
+                        <h2 className="feedEmptyMessage">
+                            Nothing to see here, yet! Check out what's <a href="/forthcoming">coming soon</a>, or listen to some of our <a href="/guestmixes">guest mixes</a>!
+                        </h2>
+                    }
                 </div>
             )
         }

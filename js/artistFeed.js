@@ -44,7 +44,7 @@ function ArtistPage(props) {
     var artistReleases = [];
     var firstRelease = true;
     for (var i = 0; i < props.releases.length; i++) {
-        if (props.releases[i]['artistId'] == props.id) {
+        if (props.releases[i]['artistIds'].includes(props.id)) {
             if (firstRelease) {
                 artistReleases.push(React.createElement(
                     "div",
@@ -52,12 +52,14 @@ function ArtistPage(props) {
                     React.createElement("iframe", { width: "100%", height: "166", scrolling: "no", frameBorder: "no", allow: "autoplay", src: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/" + props.releases[i].sctrackid + "&color=%23d0021b&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" })
                 ));
                 firstRelease = false;
+                console.log("Pushed first");
             } else {
                 artistReleases.push(React.createElement(
                     "div",
                     { className: "carousel-item", key: props.releases[i].title },
                     React.createElement("iframe", { width: "100%", height: "166", scrolling: "no", frameBorder: "no", allow: "autoplay", src: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/" + props.releases[i].sctrackid + "&color=%23d0021b&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" })
                 ));
+                console.log("Pushed not first");
             }
         }
     }
@@ -178,7 +180,6 @@ var ArtistFeed = function (_React$Component) {
         value: function render() {
             var _this3 = this;
 
-            console.log(this.state.artistSpotlight);
             if (!this.state.retrievedItems) {
                 return React.createElement(
                     "div",

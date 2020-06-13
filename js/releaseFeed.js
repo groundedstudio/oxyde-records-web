@@ -85,21 +85,40 @@ var ReleaseFeed = function (_React$Component) {
             if (!this.state.retreivedItems) {
                 return React.createElement("div", { className: "loader" });
             } else {
-                var tracks = this.state.releases.map(function (track) {
-                    return React.createElement(TrackElement, {
-                        title: track.title,
-                        artistNames: track.artistNames,
-                        artistIds: track.artistIds,
-                        releaseDate: track.releaseDate,
-                        desc: track.desc,
-                        sctrackid: track.sctrackid,
-                        key: track.title
-                    });
+                var tracks = [];
+                this.state.releases.forEach(function (release, i) {
+                    if (release.isOxydeReleased) {
+                        tracks.push(React.createElement(TrackElement, {
+                            title: release.title,
+                            artistNames: release.artistNames,
+                            artistIds: release.artistIds,
+                            releaseDate: release.releaseDate,
+                            desc: release.desc,
+                            sctrackid: release.sctrackid,
+                            key: release.title
+                        }));
+                    }
                 });
                 return React.createElement(
                     "div",
                     null,
-                    tracks
+                    tracks.length > 0 ? tracks : React.createElement(
+                        "h2",
+                        { className: "feedEmptyMessage" },
+                        "Nothing to see here, yet! Check out what's ",
+                        React.createElement(
+                            "a",
+                            { href: "/forthcoming" },
+                            "coming soon"
+                        ),
+                        ", or listen to some of our ",
+                        React.createElement(
+                            "a",
+                            { href: "/guestmixes" },
+                            "guest mixes"
+                        ),
+                        "!"
+                    )
                 );
             }
         }

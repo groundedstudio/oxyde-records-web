@@ -22,7 +22,7 @@ function ArtistPage (props) {
     var artistReleases = [];
     var firstRelease = true;
     for (var i = 0; i < props.releases.length; i++) {
-        if (props.releases[i]['artistId'] == props.id) {
+        if (props.releases[i]['artistIds'].includes(props.id)) {
             if (firstRelease) {
                 artistReleases.push(
                     <div className="carousel-item active" key={props.releases[i].title}>
@@ -30,12 +30,14 @@ function ArtistPage (props) {
                     </div>
                 )
                 firstRelease = false;
+                console.log("Pushed first")
             } else {
                 artistReleases.push(
                     <div className="carousel-item" key={props.releases[i].title}>
                         <iframe width="100%" height="166" scrolling="no" frameBorder="no" allow="autoplay" src={`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${props.releases[i].sctrackid}&color=%23d0021b&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true`}></iframe>
                     </div>
                 )
+                console.log("Pushed not first")
             }
         }
     }
@@ -101,7 +103,6 @@ class ArtistFeed extends React.Component {
     }
 
     render() {
-        console.log(this.state.artistSpotlight)
         if (!this.state.retrievedItems) {
             return (
                 <div className="loaderWrapper">
