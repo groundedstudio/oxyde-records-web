@@ -4,7 +4,7 @@
         "artistNames": ["Housty"],
         "artistIds": ["housty"],
         "releaseDate": "09 May 2020 00:00:00 UTC",
-        "desc": "Insert brief description here",
+        "desc": "",
         "sctrackid": "812199241",
         "isOxydeReleased": false
     },
@@ -13,8 +13,26 @@
         "artistNames": ["Housty"],
         "artistIds": ["housty"],
         "releaseDate": "09 May 2020 00:00:00 UTC",
-        "desc": "Insert brief description here",
+        "desc": "",
         "sctrackid": "802688827",
+        "isOxydeReleased": false
+    },
+    {
+        "title": "Darker",
+        "artistNames": ["Housty"],
+        "artistIds": ["housty"],
+        "releaseDate": "09 May 2020 00:00:00 UTC",
+        "desc": "",
+        "sctrackid": "783726271",
+        "isOxydeReleased": false
+    },
+    {
+        "title": "DAY YOU DIE W/ MURFY SMURFS",
+        "artistNames": ["Housty"],
+        "artistIds": ["housty"],
+        "releaseDate": "09 May 2020 00:00:00 UTC",
+        "desc": "",
+        "sctrackid": "793942954",
         "isOxydeReleased": false
     }
 ]
