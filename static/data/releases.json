@@ -34,5 +34,14 @@
         "desc": "",
         "sctrackid": "793942954",
         "isOxydeReleased": false
+    },
+    {
+        "title": "Ghost - Alan Walker x Au/ra (Housty x CJ Refix)",
+        "artistNames": ["Housty", "CJ"],
+        "artistIds": ["housty", "cj"],
+        "releaseDate": "19 Jun 2020 00:00:00 UTC",
+        "desc": "CJ and Housty combine for the first release on Oxyde Records.",
+        "sctrackid": "825060979",
+        "isOxydeReleased": true
     }
 ]
