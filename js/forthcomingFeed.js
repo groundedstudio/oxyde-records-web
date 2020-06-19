@@ -108,10 +108,26 @@ var ForthcomingFeed = function (_React$Component) {
                 return React.createElement(
                     "div",
                     null,
-                    React.createElement(
+                    tracks.length > 0 ? React.createElement(
                         "div",
                         { className: "card-deck" },
                         tracks
+                    ) : React.createElement(
+                        "h2",
+                        { className: "feedEmptyMessage" },
+                        "Nothing to see here, yet! Check out our ",
+                        React.createElement(
+                            "a",
+                            { href: "/" },
+                            "releases"
+                        ),
+                        ", or listen to some of our ",
+                        React.createElement(
+                            "a",
+                            { href: "/guestmixes" },
+                            "guest mixes"
+                        ),
+                        "!"
                     )
                 );
             }

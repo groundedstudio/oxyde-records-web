@@ -65,9 +65,16 @@ class ForthcomingFeed extends React.Component {
             })
             return (
                 <div>
-                    <div className="card-deck">
-                        {tracks}
-                    </div>
+                    {tracks.length > 0
+                        ?
+                        <div className="card-deck">
+                            {tracks}
+                        </div>
+                        :
+                        <h2 className="feedEmptyMessage">
+                            Nothing to see here, yet! Check out our <a href="/">releases</a>, or listen to some of our <a href="/guestmixes">guest mixes</a>!
+                        </h2>
+                    }
                 </div>
             )
         }
